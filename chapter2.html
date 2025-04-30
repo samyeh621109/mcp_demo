@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能技術的迭代 - 從AI人工智能 到 QII 量融智能：從零開始<</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hud-overlay"></div>
+  
+  <nav>
+     <div class="nav-container">
+      <div class="logo">SAMYEH分享</div>
+      <div class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="prologue.html">楔子</a>
+        <a href="chapter1.html">科技通訊協定演進</a>
+        <a href="chapter2.html">MCP是統一AI江湖的協定嗎</a>
+        <a href="chapter3.html">AI技術的迭代</a>
+        <a href="demo.html">MCP互動實驗</a>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="chapter-header">
+    <div class="chapter-number">第二章</div>
+    <h1 class="chapter-title">MCP是統一AI江湖的協定嗎</h1>
+    <p class="chapter-subtitle">探討模型通訊協定的演進：從Function Calling到MCP再到Agent2Agent</p>
+  </section>
+  
+  <div class="container">
+    <section class="content-section">
+      <h2 class="section-heading">AI通訊模式的演進</h2>
+      <p class="content-paragraph">
+        隨著AI技術的發展，AI系統之間以及AI與外部世界的通訊方式也在不斷演進。從最初的簡單函數調用，到現在的複雜協同工作模式，我們可以看到AI通訊協定正朝著更加智能化、自主化的方向發展。以下我們將探討三種代表性的通訊模式及其各自的特點。
+      </p>
+      
+      <div class="timeline-section">
+        <div class="timeline-container">
+          <div class="timeline-card">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-title">Function Calling</div>
+            <p class="timeline-description">
+              最早期的AI增強能力模式，允許語言模型識別何時需要調用外部函數來完成任務。
+            </p>
+
+	<section class="content-section">
+      <h2 class="section-heading">Function Calling：單向賦能</h2>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title" style="color:Tomato;">核心流程：User(詢問) <---- LLM（店員) <----- Function/API（氣象台函數/API)</h3>
+        <p>在Function Calling模式中，語言模型可以識別何時需要調用特定函數來執行它自己無法直接完成的任務，這是AI能力延伸的第一步。</p>
+      </div>
+      
+      <p class="content-paragraph">
+        想像您在高級餐廳就餐，向店員（LLM）詢問今天的天氣預報。服務員本身並不掌握這一資訊，但他知道應該查詢氣象站（函數/API）來獲取答案。服務員會離開片刻，撥打電話給氣象站，然後返回為您提供天氣資訊。這整個過程中，服務員知道：
+      </p>
+      
+      <ul class="content-paragraph">
+        <li>何時需要調用外部資源（認識到天氣問題不在自己知識範圍內）</li>
+        <li>應該調用哪個資源（氣象站而非體育場）</li>
+        <li>如何正確提問（使用規範的格式請求天氣資訊）</li>
+        <li>如何解讀回應並將其傳達給您（將專業氣象資料轉化為更易理解的回答）</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">Function Calling的關鍵特性</h3>
+        <div class="tech-list">
+          <span class="tech-tag">單向調用</span>
+          <span class="tech-tag">功能驅動</span>
+          <span class="tech-tag">指令型交互</span>
+          <span class="tech-tag">擴展能力</span>
+          <span class="tech-tag">工具使用</span>
+        </div>
+        <p>Function Calling最大的特點是它的單向性 - LLM識別需求，調用函數，獲取結果，然後呈現給用戶。整個過程中，API只是被動地執行LLM的指令，而不會與LLM進行雙向的深度溝通。</p>
+      </div>
+    </section>	  
+	          </div>	  
+          
+          <div class="timeline-card">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-title">Model Context Protocol (MCP)</div>
+            <p class="timeline-description">
+              更進階的雙向通訊協定，實現模型與工具間的深度上下文共享與協作。
+            </p>
+			
+	<section class="content-section">
+      <h2 class="section-heading">Model Context Protocol (MCP)：雙向對話</h2>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title" style="color:Tomato;">核心流程：User(我要去旅行) <--> LLM(私人助理) <---> Tool/API(訂機票API,飯店API,天氣API...)</h3>
+        <p>MCP實現了模型與工具之間的雙向深度交流，不僅傳遞數據，還共享上下文、理解與推理過程。</p>
+      </div>
+      
+      <p class="content-paragraph">
+        如果將Function Calling比作服務員撥打電話查詢信息，那麼MCP則更像您有一位私人助理在為您協調多個專家團隊。想像您正計劃一次複雜的商務旅行，您的私人助理（LLM）不僅僅是簡單地向航空公司、酒店和會議場所發送單獨的請求，而是與這些服務提供者建立持續的對話。
+      </p>
+      
+      <p class="content-paragraph">
+        在MCP模式下，私人助理可以：
+      </p>
+      
+      <ul class="content-paragraph">
+        <li>與航空公司討論多種航班選項，解釋您的偏好和限制條件</li>
+        <li>將航班信息傳達給酒店預訂系統，確保入住時間與航班到達時間協調</li>
+        <li>根據會議日程安排調整交通和住宿計劃</li>
+        <li>當出現衝突或問題時，與各方進行協商尋找最佳解決方案</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">MCP的關鍵特性</h3>
+        <div class="tech-list">
+          <span class="tech-tag">雙向交流</span>
+          <span class="tech-tag">上下文共享</span>
+          <span class="tech-tag">協商能力</span>
+          <span class="tech-tag">理解傳遞</span>
+          <span class="tech-tag">持續對話</span>
+        </div>
+        <p>MCP核心在於它實現了從「調用」到「對話」的範式轉變。工具不再只是被動執行命令，而是能夠提供反饋、提出建議並參與解決問題的過程。</p>
+      </div>
+    </section>		
+          </div>
+          
+          <div class="timeline-card">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-title">Agent2Agent (A2A)</div>
+            <p class="timeline-description">
+              智能代理間的直接通訊與協作模式，代表AI系統間的高度自主協作能力。
+            </p>
+			  <section class="content-section">
+      <h2 class="section-heading">Agent2Agent (A2A)：自主協作</h2>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title" style="color:Tomato;">核心流程：Agent A(活動策劃師) <--> Agent B(餐飲顧問)</h3>
+        <p>A2A代表了最高級別的AI通訊模式，智能代理之間可以直接溝通協作，共同解決複雜問題。</p>
+      </div>
+      
+      <p class="content-paragraph">
+        想像您正在籌備一場大型企業活動，您聘請了一位活動策劃師（Agent A）和一位餐飲顧問（Agent B）。在A2A模式下，這兩位專業人士不需要您作為中介，他們可以直接相互溝通、協調並解決問題。
+      </p>
+      
+      <p class="content-paragraph">
+        例如：
+      </p>
+      
+      <ul class="content-paragraph">
+        <li>活動策劃師告訴餐飲顧問預計的參與人數、活動性質和時間安排</li>
+        <li>餐飲顧問根據這些資訊提出適合的菜單選項和服務方案</li>
+        <li>兩位專家討論潛在的挑戰（如場地限制、飲食禁忌）並共同尋找解決方案</li>
+        <li>他們自主協調細節，如上菜時間與活動流程的配合，無需您的持續干預</li>
+        <li>最終，他們向您呈現一個統一、協調的完整計劃</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">A2A的關鍵特性</h3>
+        <div class="tech-list">
+          <span class="tech-tag">自主協作</span>
+          <span class="tech-tag">專業分工</span>
+          <span class="tech-tag">直接溝通</span>
+          <span class="tech-tag">問題解決</span>
+          <span class="tech-tag">目標一致</span>
+        </div>
+        <p>A2A模式代表了AI系統走向真正自主性的重要一步。在這種模式下，每個智能代理都是具有特定專長的獨立實體，能夠基於共同目標進行有效協作。</p>
+      </div>
+    </section>
+          </div>
+		  
+        </div>
+		
+      </div>
+    </section>
+    <section class="content-section">
+      <h2 class="section-heading">三種模式的比較與應用場景</h2>
+      
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>特性</th>
+              <th>Function Calling</th>
+              <th>MCP</th>
+              <th>A2A</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>交互方式</td>
+              <td>單向調用</td>
+              <td>雙向對話</td>
+              <td>多向協作</td>
+            </tr>
+            <tr>
+              <td>上下文共享</td>
+              <td>有限</td>
+              <td>豐富</td>
+              <td>全面</td>
+            </tr>
+            <tr>
+              <td>自主程度</td>
+              <td>低</td>
+              <td>中</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td>複雜度</td>
+              <td>簡單</td>
+              <td>中等</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td>適用場景</td>
+              <td>特定任務執行</td>
+              <td>複雜問題解決</td>
+              <td>專業領域協作</td>
+            </tr>
+          </tbody>
+        </table>
+		        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
+          <div class="device-image-container">
+            <img src="a2a_mcp.gif" width="500" alt="A2A vs MCP" class="device-image"/>
+            <div class="image-caption">A2A與MCP比較圖</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">從工具使用到智能協作的演進路徑</h3>
+        <p>
+          這三種通訊模式代表了AI系統交互能力的演進階段，從最初的簡單工具使用（Function Calling），到更深入的對話式協作（MCP），再到高度自主的專業協作（A2A）。每一步都意味著AI系統在處理複雜任務、理解上下文和進行協作方面能力的提升。隨著技術的進步，我們可以預見更多元、更深入的AI通訊協定將不斷湧現。
+        </p>
+      </div>
+    </section>
+    <div class="chapter-navigation">
+      <a href="chapter1.html" class="nav-button prev-button">上一章：科技通訊協定演進</a>
+      <a href="chapter3.html" class="nav-button next-button">下一章：AI技術的迭代</a>
+    </div>
+  </div>
+  <footer>
+    <p class="footer-text">智能技術的迭代 - 從AI人工智能 到 QII 量融智能：從零開始 &copy; 2025 SAMYEH分享</p>
+  </footer>
+  <script src="common.js"></script>
+</body>
+</html>

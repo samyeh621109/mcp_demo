@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能技術的迭代 - 從AI人工智能 到 QII 量融智能：從零開始</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hud-overlay"></div>
+  
+  <nav>
+      <div class="nav-container">
+      <div class="logo">SAMYEH分享</div>
+      <div class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="prologue.html">楔子</a>
+        <a href="chapter1.html">科技通訊協定演進</a>
+        <a href="chapter2.html">MCP是統一AI江湖的協定嗎</a>
+        <a href="chapter3.html">AI技術的迭代</a>
+        <a href="demo.html">MCP互動實驗</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="chapter-header">
+    <div class="chapter-number">實驗展示</div>
+    <h1 class="chapter-title">MCP互動實驗</h1>
+    <p class="chapter-subtitle">探索模型上下文協議的前沿應用與實際案例示範</p>
+  </div>
+  
+  <div class="container">
+    <section class="content-section">
+      <h2 class="section-heading">MCP技術展示</h2>
+      <p class="content-paragraph">
+        在這個互動展示區，我們將通過兩個實際案例，直觀展示MCP（模型上下文協議）如何在不同場景中發揮作用。第一個案例展示MCP在數據分析場景中的應用，第二個案例則介紹「霹靂車的AI語音助理」，探討它與MCP架構的關聯。
+      </p>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">什麼是MCP？</h3>
+        <p>
+          MCP（模型上下文協議）是一種用於AI系統間溝通的標準化框架，它允許不同的AI模型和組件在共享上下文的基礎上進行有效協作。MCP使AI系統能夠保持思考過程的透明度，實現更一致、可靠的多步驟推理。
+        </p>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">案例一：MCP銷售數據分析</h2>
+      <p class="content-paragraph">
+        首先，讓我們探索MCP如何在銷售數據分析場景中發揮作用。這個案例展示了MCP如何處理Excel數據，執行多步推理，並產生有見解的分析報告。
+      </p>
+      
+      <div class="demo-container">
+        <div class="panel">
+          <div class="panel-header">
+            源數據（Excel）
+          </div>
+          <div class="panel-content">
+            <div style="overflow-x: auto;">
+              <table class="demo-table">
+                <thead>
+                  <tr>
+                    <th>日期</th>
+                    <th>產品</th>
+                    <th>區域</th>
+                    <th>銷售額</th>
+                    <th>客戶</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2025/01/05</td>
+                    <td>智能家居套件</td>
+                    <td>北區</td>
+                    <td>28,500</td>
+                    <td>科技新貴</td>
+                  </tr>
+                  <tr>
+                    <td>2025/01/12</td>
+                    <td>智能家居套件</td>
+                    <td>南區</td>
+                    <td>35,200</td>
+                    <td>豪宅社區</td>
+                  </tr>
+                  <tr>
+                    <td>2025/01/18</td>
+                    <td>AI健康監測器</td>
+                    <td>中區</td>
+                    <td>42,800</td>
+                    <td>醫療中心</td>
+                  </tr>
+                  <tr>
+                    <td>2025/01/25</td>
+                    <td>智能家居套件</td>
+                    <td>北區</td>
+                    <td>30,100</td>
+                    <td>科技新貴</td>
+                  </tr>
+                  <tr>
+                    <td>2025/02/02</td>
+                    <td>AI健康監測器</td>
+                    <td>南區</td>
+                    <td>38,600</td>
+                    <td>銀髮族社區</td>
+                  </tr>
+                  <tr>
+                    <td>2025/02/10</td>
+                    <td>智能家居套件</td>
+                    <td>中區</td>
+                    <td>27,300</td>
+                    <td>年輕家庭</td>
+                  </tr>
+                  <tr>
+                    <td>2025/02/18</td>
+                    <td>VR學習系統</td>
+                    <td>北區</td>
+                    <td>58,900</td>
+                    <td>教育機構</td>
+                  </tr>
+                  <tr>
+                    <td>2025/02/24</td>
+                    <td>VR學習系統</td>
+                    <td>南區</td>
+                    <td>6,700</td>
+                    <td>家庭用戶</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-container">
+        <div class="timeline-card">
+          <div class="timeline-year">第一階段：數據理解</div>
+          <div class="timeline-description">
+            MCP首先建立了一個結構化的數據理解框架，自動識別Excel數據的結構與關係。
+            <div class="highlight-box" style="margin-top: 15px; background: rgba(0,10,30,0.3); font-family: monospace; font-size: 0.9rem;">
+              <pre style="color: #ddd; white-space: pre-wrap;">
+{
+  "context": {
+    "task": "sales_analysis",
+    "data_source": "excel_file",
+    "schema": {
+      "inferred": true,
+      "fields": ["date", "product", "region", "sales", "customer"]
+    }
+  },
+  "thinking": {
+    "data_patterns": ["產品種類有限", "區域分佈集中", "銷售額波動較大"],
+    "anomalies": ["VR學習系統在南區表現異常低"]
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-card">
+          <div class="timeline-year">第二階段：數據分析</div>
+          <div class="timeline-description">
+            在MCP框架下，分析被分解為多個推理步驟，每個步驟都能訪問完整上下文，並持續更新共享理解。
+            <div class="highlight-box" style="margin-top: 15px; background: rgba(0,10,30,0.3); font-family: monospace; font-size: 0.9rem;">
+              <pre style="color: #ddd; white-space: pre-wrap;">
+{
+  "context": { /* 包含前階段的上下文 */ },
+  "thinking": {
+    "regional_analysis": {
+      "north": { "total_sales": 117500, "products": ["智能家居套件", "VR學習系統"] },
+      "central": { "total_sales": 70100, "products": ["智能家居套件", "AI健康監測器"] },
+      "south": { "total_sales": 80500, "products": ["智能家居套件", "AI健康監測器", "VR學習系統"] }
+    },
+    "product_performance": {
+      "smart_home": { "total_sales": 121100, "trend": "stable" },
+      "health_monitor": { "total_sales": 81400, "trend": "growing" },
+      "vr_learning": { "total_sales": 65600, "trend": "volatile" }
+    }
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-card">
+          <div class="timeline-year">第三階段：產生結果</div>
+          <div class="timeline-description">
+            MCP最終產生的結果包含完整的推理過程與解釋性資訊，使決策和報告更加可靠和透明。
+            <div class="highlight-box" style="margin-top: 15px; background: rgba(0,10,30,0.3); font-family: monospace; font-size: 0.9rem;">
+              <pre style="color: #ddd; white-space: pre-wrap;">
+{
+  "context": { /* 包含前階段的上下文 */ },
+  "thinking": { /* 包含前階段的思考過程 */ },
+  "results": {
+    "key_insights": [
+      "智能家居套件在所有區域表現穩定，是主力產品",
+      "VR學習系統在南區表現異常，銷售額明顯偏低",
+      "北區總體銷售表現最佳，應考慮加大投入"
+    ],
+    "recommendations": [
+      "調查南區VR學習系統銷售異常原因",
+      "擴大北區智能家居套件的市場推廣",
+      "針對教育機構開發VR學習系統的增強功能"
+    ]
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">MCP數據分析的優勢</h3>
+        <p>
+          通過MCP框架，數據分析流程變得更加透明和高效。整個過程中，AI不僅完成了數據處理，還展示了推理路徑、考慮因素和決策依據。這種透明度使結果更加可靠，也使人類用戶能夠更好地理解和信任AI的分析結果。
+        </p>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">案例二：霹靂車的AI語音助理</h2>
+      <p class="content-paragraph">
+        接下來我們回過頭來藉助現今AI技術的進步，讓我們稍微感受霹靂車的AI語音助理，並了解如何將大型語言模型應用於實際的硬體設備中，以及它與MCP架構的關聯。
+      </p>
+      
+   <div class="xiaozhi-card">
+          
+        <div class="protocol-card">
+          <h3 class="protocol-name">霹靂車AI語音助理</h3>
+          <p class="protocol-desc">
+           霹靂車AI語音助理採用了模組化設計，透過微控制器連接各種感測器和輸出設備，並通過API與雲端大型語言模型（如GPT-4）交互，實現本地與雲端結合的智能應用。
+          </p>
+                  <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
+          <div class="zoomable-image">
+            <img src="layout.png"  width="500" alt="PCB Layout" class="device-image"/>
+            <div class="image-caption">PCB電路板設計</div>
+          </div>
+        </div>
+          <div class="tech-list">
+            <span class="tech-tag">嵌入式硬體(邊緣AI智能裝置)</span>
+            <span class="tech-tag">語音識別(ASR)</span>
+            <span class="tech-tag">語音合成(TTS)</span>
+            <span class="tech-tag">文字回應(LLM大型語言模型或專家模型)</span>
+            <span class="tech-tag">低功耗設計(BLE)</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-container">
+        <div class="timeline-card">
+          <div class="timeline-year">階段一：用戶指令處理</div>
+          <div class="timeline-description">
+            霹靂車AI語音助理採用MCP架構接收並處理用戶的語音或文字指令。
+            <div class="highlight-box" style="margin-top: 15px; background: rgba(0,10,30,0.3); font-family: monospace; font-size: 0.9rem;">
+              <pre style="color: #ddd; white-space: pre-wrap;">
+{
+  "context": {
+    "device": "xiaozhi_esp32",
+    "input_mode": "voice",
+    "user_query": "明天台北的天氣怎麼樣？"
+  },
+  "thinking": {
+    "intent_recognition": {
+      "type": "weather_query",
+      "location": "taipei",
+      "time": "tomorrow"
+    },
+    "required_data": ["weather_api", "location_data"]
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-card">
+          <div class="timeline-year">階段二：多模組協作</div>
+          <div class="timeline-description">
+            MCP框架使霹靂車AI語音助理的不同模組（語音識別、指令解析、API調用、回答產生）能夠無縫協作。
+            <div class="highlight-box" style="margin-top: 15px; background: rgba(0,10,30,0.3); font-family: monospace; font-size: 0.9rem;">
+              <pre style="color: #ddd; white-space: pre-wrap;">
+{
+  "context": { /* 包含前階段的上下文 */ },
+  "thinking": {
+    "api_module": {
+      "service": "weather_api",
+      "parameters": {
+        "location": "taipei",
+        "date": "2025-04-30"
+      },
+      "response": {
+        "temperature": "24-28°C",
+        "condition": "partly_cloudy",
+        "precipitation": "30%"
+      }
+    },
+    "reasoning_module": {
+      "interpretation": "明天台北天氣溫暖，部分時間有雲，有小雨機率"
+    }
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-card">
+          <div class="timeline-year">階段三：回應產生與執行</div>
+          <div class="timeline-description">
+            霹靂車AI語音助理根據處理產生結果自然語言回應，並通過TTS系統進行語音輸出。
+            <div class="highlight-box" style="margin-top: 15px; background: rgba(0,10,30,0.3); font-family: monospace; font-size: 0.9rem;">
+              <pre style="color: #ddd; white-space: pre-wrap;">
+{
+  "context": { /* 包含前階段的上下文 */ },
+  "thinking": { /* 包含前階段的思考過程 */ },
+  "response": {
+    "text": "明天台北的天氣將會是攝氏24到28度，部分時間有雲，有30%的降雨機率。建議攜帶輕便雨具以防萬一。",
+    "voice_parameters": {
+      "speed": 1.0,
+      "pitch": 1.0,
+      "emphasis": ["雨具", "以防萬一"]
+    },
+    "device_actions": {
+      "display": {
+        "show_weather_icon": "partly_cloudy",
+        "show_temperature": "24-28°C"
+      }
+    }
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3 class="highlight-title">霹靂車AI語音助理與MCP的結合優勢</h3>
+        <p>
+          透過MCP框架，霹靂車AI語音助理實現了模組化設計與透明的思考過程，具有以下優勢：
+        </p>
+        <ul>
+          <li>硬體資源優化：硬體有限計算資源能夠專注於具體任務，將複雜推理交給雲端服務</li>
+          <li>開發便利性：各模組開發者可以專注於自己的專業領域，MCP確保接口統一</li>
+          <li>擴展性：可以輕鬆新增功能模組，如環境感測、家電控制等</li>
+          <li>多模態交互：結合語音、文字、LED顯示等多種交互方式，提供更豐富的用戶體驗</li>
+          <li>透明推理：用戶可以理解AI如何處理他們的請求，提高信任度</li>
+        </ul>
+      </div>
+    </section>
+    
+ 
+    
+    <section class="content-section">
+      <h2 class="section-heading">未來展望</h2>
+      <p class="content-paragraph">
+        MCP作為一種新興的AI系統溝通標準，正在開拓全新的應用可能性。在未來，我們期待看到MCP在以下領域發揮更大作用：
+      </p>
+      
+      <div class="protocol-card">
+        <h3 class="protocol-name">多智能代理系統</h3>
+        <p class="protocol-desc">
+          MCP可以成為多個AI智能代理協作的基礎，使它們能夠分工合作、共享上下文，並協調行動，實現單一AI無法完成的複雜任務。
+        </p>
+      </div>
+      
+      <div class="protocol-card">
+        <h3 class="protocol-name">人機協作增強</h3>
+        <p class="protocol-desc">
+          透過MCP的透明推理過程，人類可以更好地理解AI的決策過程，在關鍵環節提供指導或修正，實現人機協作的最佳效果。
+        </p>
+      </div>
+      
+      <div class="protocol-card">
+        <h3 class="protocol-name">AI系統可解釋性</h3>
+        <p class="protocol-desc">
+          MCP的結構化上下文和思考過程記錄，為AI系統行為提供了可追溯的解釋路徑，提升了AI決策的透明度和可信度。
+        </p>
+      </div>
+    </section>
+    
+    <div class="chapter-navigation">
+      <a href="chapter3.html" class="nav-button prev-button">返回上一章</a>
+      <a href="index.html" class="nav-button next-button">回到首頁</a>
+    </div>
+  </div>
+  
+  <footer>
+    <p class="footer-text">智能技術的迭代 - 從AI人工智能 到 QII 量融智能：從零開始 &copy; 2025 SAMYEH分享</p>
+  </footer>
+  <!-- Modal 放大圖顯示區 -->
+<div id="imageModal" class="modal">
+  <img class="modal-content" id="modalImage" />
+</div>
+
+<script>
+  document.querySelectorAll('.zoomable-image img').forEach(img => {
+    img.addEventListener('click', function () {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+  });
+
+  document.getElementById("imageModal").addEventListener('click', function () {
+    this.style.display = "none";
+  });
+</script>
+  <!-- 引入外部 JavaScript -->
+  <script src="common.js"></script>
+</body>
+</html>
